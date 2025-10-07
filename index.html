@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harry Potter World</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background: radial-gradient(circle at center, #1c1e2b 0%, #0a0b14 100%);
+      color: #f5e8c7;
+      font-family: 'Cinzel', serif;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    h1 {
+      color: #d4af37;
+      font-size: 36px;
+      text-shadow: 0 0 10px rgba(212, 175, 55, 0.7);
+    }
+
+    p {
+      color: #e0d6b6;
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    button {
+      background: #d4af37;
+      color: #1a2135;
+      font-weight: bold;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 15px rgba(212,175,55,0.6);
+    }
+
+    #fact {
+      margin-top: 40px;
+      font-size: 22px;
+      color: #f5e8c7;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      text-shadow: 0 0 10px rgba(255,255,255,0.1);
+    }
+
+    footer {
+      margin-top: 80px;
+      font-size: 14px;
+      color: rgba(245,232,199,0.6);
+    }
+  </style>
+</head>
+
+<body>
+  <h1>✨ Harry Potter World ✨</h1>
+  <p>Klikni gumb spodaj in odkrij naključno čarovniško dejstvo! ⚡</p>
+
+  <button onclick="showFact()">Pokaži dejstvo 🪄</button>
+  <div id="fact"></div>
+
+  <footer>
+    © 2025 Harry Potter World – Za vse ljubitelje čarovnije 🧙‍♂️
+  </footer>
+
+  <script>
+    const facts = [
+      "Daniel Radcliffe je imel več kot 80 čarovniških palic, ker jih je med snemanjem pogosto zlomil.",
+      "V Hogwartsu je kar 142 stopnišč, ki se ves čas premikajo!",
+      "Emma Watson je skoraj zapustila snemanje, da bi se osredotočila na šolo.",
+      "Tom Felton (Draco) se je sprva prijavil za vlogo Harryja.",
+      "Simbol Deathly Hallows prikazuje tri legendarne predmete – palico, kamen in plašč.",
+      "J.K. Rowling je napisala končni odstavek zadnje knjige še preden je izdala prvo.",
+      "Ministry of Magic ima več kot sedem nivojev, vsak za svoj oddelek.",
+      "Prva Harry Potter knjiga je bila zavrnjena s strani 12 različnih založb.",
+      "Ime Hedwig prihaja iz nemške svetnice iz 13. stoletja.",
+      "Za snemanje bitke za Hogwarts so porabili več kot 6 mesecev priprav!"
+    ];
+
+    function showFact() {
+      const randomFact = facts[Math.floor(Math.random() * facts.length)];
+      document.getElementById('fact').textContent = randomFact;
+    }
+  </script>
+</body>
+</html>
